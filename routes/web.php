@@ -12,7 +12,7 @@ Route::prefix('{current_team}')
     ->middleware(['auth', 'verified', EnsureTeamMembership::class])
     ->group(function () {
         Route::get('dashboard', DashboardController::class)->name('dashboard');
-        Route::get('/profile', [UserController::class, 'profile'])->name('client.profile');
+        Route::get('/profile', [UserController::class, 'profile'])->name('profile');
 
     });
 
